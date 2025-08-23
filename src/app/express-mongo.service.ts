@@ -9,37 +9,37 @@ export class ExpressMongoService {
   constructor(private http: HttpClient) { }
 
   create(data: any) {
-    return this.http.post('https://my-express-api.onrender.com/api/create',
+    return this.http.post('https://astronomy-faq.onrender.com/create',
       { data });
   }
 
   batchLoad(data: any) {
-    return this.http.post('https://my-express-api.onrender.com/api/batchLoad/',
+    return this.http.post('https://astronomy-faq.onrender.com/batchLoad',
       { data });
   }
 
   insert(data: any) {
-    return this.http.post('https://my-express-api.onrender.com/api/insert/',
+    return this.http.post('https://astronomy-faq.onrender.com/insert',
       { data });
   }
 
   retrieve() {
-    return this.http.get('https://my-express-api.onrender.com/api/retrieve/',
+    return this.http.get('https://astronomy-faq.onrender.com/retrieve',
       { });
   }
 
   update(id: any,data: any) {
-    return this.http.put('https://my-express-api.onrender.com/api/update/',
+    return this.http.put('https://astronomy-faq.onrender.com/update',
       {id, data});
   } 
 
   delete(data: any) {
-    return this.http.post('https://my-express-api.onrender.com/api/delete/',
+    return this.http.post('https://astronomy-faq.onrender.com/delete',
       { data });
   }
 
   deleteAll() {
-    return this.http.delete('https://my-express-api.onrender.com/api/deleteAll/',
+    return this.http.delete('https://astronomy-faq.onrender.com/deleteAll',
       { });
   }
 }

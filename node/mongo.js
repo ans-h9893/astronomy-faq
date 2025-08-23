@@ -7,14 +7,18 @@ const uri = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: "https://astronomy-faq.netlify.app", 
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true
+}));
 
 app.listen(PORT, () => console.log(`Server running at localhost:${PORT}!`));
 let database;
 let collection;
 
 app.get("/", (req, res) => {
-  res.send("🚀 Backend is running!");
+    res.send("🚀 Backend is running!");
 });
 
 app.post('/create', (req) => {
