@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Update Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="max-width: 500px; margin: 30px auto;">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title style="text-align:center;">Update Question</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+          <ion-item>
+            <ion-label position="stacked">Question</ion-label>
+            <ion-input [(ngModel)]="question" name="question"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Answer</ion-label>
+            <ion-input [(ngModel)]="answer" name="answer"></ion-input>
+          </ion-item>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <ion-button type="submit" (click)="insert()">Add</ion-button>
+            <ion-button type="submit" color="primary" (click)="update()">Update</ion-button>
+            <ion-button type="submit" color="danger" (click)="delete()">Delete</ion-button>
+          </div>
+        </form>
+        <div style="margin-top: 16px; color: #2d3a4b; font-weight: 500;">
+          {{outMsg}}
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

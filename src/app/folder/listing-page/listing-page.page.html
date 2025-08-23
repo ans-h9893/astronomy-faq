@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Listing Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="max-width: 600px; margin: 30px auto;">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title style="text-align:center;">Astronomy Questions</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+          <ion-button expand="block" (click)="retrieve()">Question records</ion-button>
+        </form>
+        <ion-list>
+          <ion-item
+            *ngFor="let item of outRec; track item"
+            [routerLink]="['/update']"
+            [queryParams]="{ _id: item._id, question: item.question, answer: item.answer }"
+            detail="true">
+            <ion-label>
+              <h2>{{ item.question }}</h2>
+              <p>{{ item.answer }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,15 @@
+ion-content {
+  --background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+}
+
+ion-item {
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+ion-button {
+  margin-top: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
