@@ -26,7 +26,7 @@ app.post('/create', (req) => {
     collection = req.body.data.colname;
 
     // const DataBase = `mongodb://localhost:27017/${database}`;
-    const DataBase = `${uri}/${database}`;
+    const DataBase = `${uri}${database}`;
     mongoose.set('strictQuery', true);
     const schema = collection = new mongoose.Schema({
         question: String,
