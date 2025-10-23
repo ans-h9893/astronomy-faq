@@ -32,7 +32,8 @@ app.post('/create', (req) => {
         question: String,
         answer: String,
     });
-    const course = mongoose.model(collection, schema);
+    //const course = mongoose.model(collection, schema);
+    const course = mongoose.models.astro || mongoose.model('astro', schema);
     mongoose.connect(DataBase, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
