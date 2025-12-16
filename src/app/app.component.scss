@@ -76,3 +76,31 @@ ion-label {
   color: #f5f5f5;
   letter-spacing: 0.5px;
 }
+
+/* Mobile top menu hidden by default */
+.mobile-top-menu {
+  display: none;
+}
+
+/* Responsive switch */
+@media (max-width: 991.5px) {
+
+  .mobile-top-menu {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #1f1f1f;
+    margin-bottom: 127.3%;
+    margin-left: 200px;
+  }
+
+  .mobile-top-menu ion-toolbar {
+    --background: transparent;
+    justify-content: center;
+  }
+
+  .mobile-top-menu ion-button {
+    color: #ffb347;
+  }
+}
