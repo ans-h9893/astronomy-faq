@@ -1,4 +1,4 @@
-]import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterOutlet, IonRouterLink, IonButtons, IonToolbar, IonButton } from '@ionic/angular/standalone';
 
