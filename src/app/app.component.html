@@ -1,7 +1,5 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
-
-    <div class="mobile-top-menu">
+  <div class="mobile-top-menu">
       <ion-toolbar>
         @for (p of appPages; track p; let i = $index){
           <ion-buttons slot="start">
@@ -12,8 +10,7 @@
         }
       </ion-toolbar>
     </div>
-
-
+  <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content class="menu-content">
         <div class="menu-header">
